@@ -3,7 +3,6 @@ from flask_session import Session
 from flask_mail import Mail,Message
 import os
 import psycopg2
-import psycopg2 #pip install psycopg2
 import psycopg2.extras
 import re
 import time
@@ -1000,3 +999,7 @@ def stats():
     mt = 0
     bt = 0
     return render_template('stats.html', m=m, mt=mt, bt=bt)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
